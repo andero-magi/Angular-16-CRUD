@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-16-CRUD';
+  sidebarOpen = true;
+
+  toggleSidebar() {
+    this.sidebarOpen = !this.sidebarOpen;
+  }
 }
