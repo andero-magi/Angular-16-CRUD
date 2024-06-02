@@ -11,7 +11,7 @@ import { CreditcardsService } from 'src/app/services/creditcards.service';
 })
 export class ViewComponent {
 
-  cardId: number = 0
+  cardId: number|string = 0
   details: CreditCard | undefined
   
   private destroy$: Subject<void> = new Subject<void>();
@@ -20,10 +20,10 @@ export class ViewComponent {
   }
 
   ngOnInit() {
-    const id = parseInt(this.route.snapshot.paramMap.get("id") || '')
+    const id = this.route.snapshot.paramMap.get("id") || ''
     this.cardId = id
     
-    if (id === 0) {
+    if (id == null || id == '') {
       return
     }
 

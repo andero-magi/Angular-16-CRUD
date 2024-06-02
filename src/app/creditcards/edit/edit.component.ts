@@ -15,7 +15,7 @@ export class EditComponent {
 
   cForm!: FormGroup
   card: CreditCard | null = null
-  cardId: number = 0;
+  cardId: number|string = 0;
   private destroy$: Subject<void> = new Subject<void>()
 
   constructor(
@@ -43,10 +43,10 @@ export class EditComponent {
   }
 
   ngOnInit() {
-    const id = parseInt(this.route.snapshot.paramMap.get("id") || '')
+    const id = this.route.snapshot.paramMap.get("id") || ''
     this.cardId = id
 
-    if (id == 0) {
+    if (id == null || id == '') {
       return
     }
 

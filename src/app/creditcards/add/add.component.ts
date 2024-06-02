@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { ROUTER_CONFIGURATION, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+import { Subject, takeUntil } from 'rxjs';
 import { CreditCard } from 'src/app/models/credit-card';
 import { CreditcardsService } from 'src/app/services/creditcards.service';
 
@@ -11,7 +12,7 @@ import { CreditcardsService } from 'src/app/services/creditcards.service';
 })
 export class AddComponent {
 
-  private subscription: Subscription | undefined
+  private destroy$: Subject<void> = new Subject<void>()
 
   newCreditCard: CreditCard = {
     id: undefined,
@@ -28,22 +29,30 @@ export class AddComponent {
     updatedDate: new Date().toString()
   }
 
-  constructor(private service: CreditcardsService, private router: Router) {
+  constructor(
+    private service: CreditcardsService, 
+    private router: Router,
+    private snackbar: MatSnackBar
+  ) {
 
   }
 
   saveCreditCard() {
-    this.subscription = this.service.createCreditCard(this.newCreditCard).subscribe(data => {
-      alert("Credit Card added")
-      this.router.navigate(["creditcards"])
-    })
+    this.service.createCreditCard(this.newCreditCard)
+        .pipe(takeUntil(this.destroy$))
+        .subscribe(data => {
+          this.snackbar.open("Credit card added successfully!", 'close', {
+            duration: 3000,
+            verticalPosition: 'top',
+            horizontalPosition: 'right'
+          })
+
+          this.router.navigate(["creditcards"])
+        })
   }
 
   ngOnDestroy() {
-    if (!this.subscription) {
-      return
-    }
-
-    this.subscription.unsubscribe()
+    this.destroy$.next()
+    this.destroy$.complete()
   }
 }

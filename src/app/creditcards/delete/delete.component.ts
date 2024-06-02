@@ -11,7 +11,7 @@ import { CreditcardsService } from 'src/app/services/creditcards.service';
 })
 export class DeleteComponent {
 
-  cardId: number = 0
+  cardId: number|string = 0
   private destroy$: Subject<void> = new Subject<void>()
 
   constructor(
@@ -20,9 +20,17 @@ export class DeleteComponent {
     private route: Router,
     private snackbar: MatSnackBar
   ) {
-    this.cardId = parseInt(this.router.snapshot.paramMap.get("id") || '')
+  }
 
-    this.service.deleteCreditCard(this.cardId)
+  ngOnInit() {
+    let id = this.router.snapshot.paramMap.get("id") || ''
+    this.cardId = id
+
+    if (id == null || id == '') {
+      return
+    }
+
+    this.service.deleteCreditCard(id)
         .pipe(takeUntil(this.destroy$))
         .subscribe(data => {
           this.showSuccessMessage("Credit Card Deleted Successfully")

@@ -20,8 +20,8 @@ export class CreditcardsService {
     return this.httpClient.get<CreditCard[]>(this.apiUrl)
   }
 
-  getCreditCardById(id: number): Observable<CreditCard> {
-    let url = this.apiUrl + "/" + id
+  getCreditCardById(id: number | string): Observable<CreditCard> {
+    let url = `${this.apiUrl}/${id}`
     return this.httpClient.get<CreditCard>(url)
   }
 
@@ -30,8 +30,8 @@ export class CreditcardsService {
     return this.httpClient.put<CreditCard>(url, card)
   }
 
-  deleteCreditCard(id: number): Observable<void> {
-    let url = this.apiUrl + "/" + id
+  deleteCreditCard(id: number|string): Observable<void> {
+    let url = `${this.apiUrl}/${id}`
     return this.httpClient.delete<void>(url)
   }
 }

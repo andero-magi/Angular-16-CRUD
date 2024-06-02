@@ -52,15 +52,12 @@ export class CreditcardsComponent {
   }
 
   calculateMetrics() {
-    this.metrics.bigMaxCredit = this.cards.filter(c => Number(c.maxCredit) > 3000).length
-    this.metrics.bigInterest = this.cards.filter(c => Number(c.interestRate) > 7).length
-
     this.cards.forEach(card => {
       if (Number(card.maxCredit) >= 3000) {
         this.metrics.bigMaxCredit++
       }
 
-      if (Number(card.interestRate) > 7) {
+      if (Number(card.interestRate) > 15) {
         this.metrics.bigInterest++
       }
 
