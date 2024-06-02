@@ -1,19 +1,19 @@
 <div class="mat-card" style="display: flex; flex-direction: row;">
   <mat-card class="count-card">
-    <mat-card-title>Num of Cards</mat-card-title>
-    <mat-card-content>10</mat-card-content>
+    <mat-card-title>Cards with more than 3000 Max Credit</mat-card-title>
+    <mat-card-content>{{metrics.bigMaxCredit}}</mat-card-content>
   </mat-card>
   <mat-card class="mat-card count-card">
-    <mat-card-title>Num of Cards</mat-card-title>
-    <mat-card-content>10</mat-card-content>
+    <mat-card-title>Number of Credit Cards with more than 7% Interest</mat-card-title>
+    <mat-card-content>{{metrics.bigInterest}}</mat-card-content>
   </mat-card>
   <mat-card class="mat-card count-card">
-    <mat-card-title>Num of Cards</mat-card-title>
-    <mat-card-content>10</mat-card-content>
+    <mat-card-title>Number of Credit Cards</mat-card-title>
+    <mat-card-content>{{cards.length}}</mat-card-content>
   </mat-card>
   <mat-card class="mat-card count-card">
-    <mat-card-title>Num of Cards</mat-card-title>
-    <mat-card-content>10</mat-card-content>
+    <mat-card-title>Inactive Cards</mat-card-title>
+    <mat-card-content>{{metrics.inactive}}</mat-card-content>
   </mat-card>
 </div>
 

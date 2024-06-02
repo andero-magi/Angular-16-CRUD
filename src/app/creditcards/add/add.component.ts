@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ROUTER_CONFIGURATION, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { CreditCard } from 'src/app/models/credit-card';
 import { CreditcardsService } from 'src/app/services/creditcards.service';
 
@@ -9,6 +10,8 @@ import { CreditcardsService } from 'src/app/services/creditcards.service';
   styleUrls: ['./add.component.scss']
 })
 export class AddComponent {
+
+  private subscription: Subscription | undefined
 
   newCreditCard: CreditCard = {
     id: undefined,
@@ -30,9 +33,17 @@ export class AddComponent {
   }
 
   saveCreditCard() {
-    this.service.createCreditCard(this.newCreditCard).subscribe(data => {
+    this.subscription = this.service.createCreditCard(this.newCreditCard).subscribe(data => {
       alert("Credit Card added")
       this.router.navigate(["creditcards"])
     })
+  }
+
+  ngOnDestroy() {
+    if (!this.subscription) {
+      return
+    }
+
+    this.subscription.unsubscribe()
   }
 }
