@@ -9,6 +9,6 @@ export interface CreditCard {
   recommendedScore: string
   annualFee: number | string
   termsAndConditions: string
-  createdDate: string
-  updatedDate: string
+  createdDate: string | Date
+  updatedDate: string | Date
 }

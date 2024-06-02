@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'view/:id', component: ViewComponent },
   { path: 'edit/:id', component: EditComponent },
   { path: 'delete/:id', component: DeleteComponent },
-  { path: 'add/:id', component: AddComponent },
+  { path: 'add', component: AddComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

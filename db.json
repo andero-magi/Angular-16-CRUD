@@ -1,35 +1,7 @@
 {
   "creditcards": [
     {
-      "id": 2,
-      "name": "SBI Bank",
-      "description": "SBI Bank offers customers with various options",
-      "bankName": "SBI Bank",
-      "maxCredit": 3000,
-      "interestRate": 10,
-      "active": true,
-      "recommendedScore": "700-900",
-      "annualFee": 4,
-      "termsAndConditions": "Following are the terms and conditions",
-      "createdDate": "2023-31-08",
-      "updatedDate": "2023-31-08"
-    },
-    {
-      "id": 4,
-      "name": "Mastercard",
-      "description": "Mastercard offers customers with various options",
-      "bankName": "Mastercard",
-      "maxCredit": 3000,
-      "interestRate": 10,
-      "active": true,
-      "recommendedScore": "700-900",
-      "annualFee": 4,
-      "termsAndConditions": "Following are the terms and conditions",
-      "createdDate": "2023-31-08",
-      "updatedDate": "2023-31-08"
-    },
-    {
-      "id": 5,
+      "id": "5",
       "name": "Visa",
       "description": "Visa offers customers with various options",
       "bankName": "Visa",
@@ -43,7 +15,7 @@
       "updatedDate": "2023-31-08"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Bank of America",
       "description": "Bank of America offers customers with various options",
       "bankName": "Bank of America",
@@ -57,7 +29,7 @@
       "updatedDate": "2023-31-08"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Bank of America",
       "description": "Bank of America offers customers with various options",
       "bankName": "Bank of America",
@@ -71,7 +43,7 @@
       "updatedDate": "2023-31-08"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Bank of America",
       "description": "Bank of America offers customers with various options",
       "bankName": "Bank of America",
@@ -85,7 +57,7 @@
       "updatedDate": "2023-31-08"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Bank of America",
       "description": "Bank of America offers customers with various options",
       "bankName": "Bank of America",
@@ -99,7 +71,7 @@
       "updatedDate": "2023-31-08"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Bank of America",
       "description": "Bank of America offers customers with various options",
       "bankName": "Bank of America",
@@ -113,7 +85,7 @@
       "updatedDate": "2023-31-08"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Bank of America",
       "description": "Bank of America offers customers with various options",
       "bankName": "Bank of America",
@@ -127,7 +99,7 @@
       "updatedDate": "2023-31-08"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Bank of America",
       "description": "Bank of America offers customers with various options",
       "bankName": "Bank of America",
@@ -141,7 +113,7 @@
       "updatedDate": "2023-31-08"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Bank of America",
       "description": "Bank of America offers customers with various options",
       "bankName": "Bank of America",
@@ -155,7 +127,7 @@
       "updatedDate": "2023-31-08"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Bank of America",
       "description": "Bank of America offers customers with various options",
       "bankName": "Bank of America",
@@ -169,7 +141,7 @@
       "updatedDate": "2023-31-08"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Bank of America",
       "description": "Bank of America offers customers with various options",
       "bankName": "Bank of America",
@@ -183,7 +155,7 @@
       "updatedDate": "2023-31-08"
     },
     {
-      "id": -1,
+      "id": "-1",
       "name": "Test1",
       "description": "Some bank",
       "bankName": "Bank1",
@@ -208,7 +180,7 @@
       "termsAndConditions": "Terms and Conditions of the card",
       "createdDate": "2023-10-19T04:00:00.000Z",
       "updatedDate": "2024-12-10T05:00:00.000Z",
-      "id": 6
+      "id": "6"
     },
     {
       "name": "Platinum Card",
@@ -222,7 +194,7 @@
       "termsAndConditions": "Terms and conditions for the credit card",
       "createdDate": "2023-10-18T04:00:00.000Z",
       "updatedDate": "2023-10-19T04:00:00.000Z",
-      "id": 7
+      "id": "7"
     }
   ]
 }

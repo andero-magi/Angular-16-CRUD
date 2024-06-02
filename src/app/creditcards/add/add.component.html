@@ -1,1 +1,78 @@
-<p>add works!</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Add new Credit Card</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form #f="ngForm" (ngSubmit)="saveCreditCard()">
+      <div class="form-group">
+        <mat-form-field>
+          <label for="name">Name</label>
+          <input matInput name="name" maxlength="20" minlength="3" placeholder="Enter Credit Card Name" [(ngModel)]="newCreditCard.name" required>
+          <mat-error *ngIf="f.controls['name']?.touched && f.controls['name']?.hasError('required')">Required</mat-error>
+          <mat-error *ngIf="f.controls['name']?.touched && f.controls['name']?.hasError('minlength')">Name must have at least 3 characters</mat-error>
+          <mat-error *ngIf="f.controls['name']?.touched && f.controls['name']?.hasError('maxlength')">Name cannot be more than 20 characters</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <label for="bankname">Bank Name</label>
+          <input matInput name="bankname" maxlength="50" minlength="3" placeholder="Enter Bank Name" [(ngModel)]="newCreditCard.bankName" required>
+          <mat-error *ngIf="f.controls['bankname']?.touched && f.controls['bankname']?.hasError('required')">Required</mat-error>
+          <mat-error *ngIf="f.controls['bankname']?.touched && f.controls['bankname']?.hasError('minlength')">Name must have at least 3 characters</mat-error>
+          <mat-error *ngIf="f.controls['bankname']?.touched && f.controls['bankname']?.hasError('maxlength')">Name cannot be more than 50 characters</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field style="width: 100%">
+          <label for="description">Description</label>
+          <textarea matInput name="description" placeholder="Enter Description" [(ngModel)]="newCreditCard.description"></textarea>
+          <mat-error *ngIf="f.controls['description']?.touched && f.controls['description']?.hasError('required')">Required</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field>
+          <label for="maxcredit">Max Credit</label>
+          <input matInput name="maxcredit" type="number" placeholder="Enter Max Credit" [(ngModel)]="newCreditCard.maxCredit" required>
+          <mat-error *ngIf="f.controls['maxcredit']?.touched && f.controls['maxcredit']?.hasError('required')">Required</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field>
+          <label for="ir_rate">Interest Rate</label>
+          <input matInput name="ir_rate" type="number" placeholder="Enter Interest Rate" [(ngModel)]="newCreditCard.interestRate" required>
+          <mat-error *ngIf="f.controls['ir_rate']?.touched && f.controls['ir_rate']?.hasError('required')">Required</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-checkbox name="active" [(ngModel)]="newCreditCard.active">Active</mat-checkbox>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field style="width: 50%;">
+          <label for="recommendedScore">Select Recommended Score</label>
+
+          <mat-select name="recommendedScore" [(ngModel)]="newCreditCard.recommendedScore">
+            <mat-option value="100-500" selected>100-500</mat-option>
+            <mat-option value="300-500">300-500</mat-option>
+            <mat-option value="200-600">200-600</mat-option>
+            <mat-option value="400-600">400-600</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Choose Creation date</mat-label>
+          <input matInput name="creationdate" [(ngModel)]="newCreditCard.createdDate" [matDatepicker]="createDate" required>
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="createDate">
+            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+          </mat-datepicker-toggle>
+          <mat-datepicker #createDate></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <button mat-raised-button color="primary" [disabled]="!f.valid">Create new Credit Card</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
