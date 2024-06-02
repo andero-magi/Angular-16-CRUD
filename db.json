@@ -195,6 +195,48 @@
       "createdDate": "2023-10-18T04:00:00.000Z",
       "updatedDate": "2023-10-19T04:00:00.000Z",
       "id": "7"
+    },
+    {
+      "id": -1,
+      "name": "Cool card",
+      "bankName": "Awesomesauce bank",
+      "description": "This is a card from an awesome bank B)",
+      "maxCredit": 5000,
+      "interestRate": 12,
+      "active": true,
+      "recommendedScore": "100-500",
+      "annualFee": 12,
+      "termsAndConditions": "Terms and conditions for the credit card",
+      "createdDate": "2024-05-31T21:00:00.000Z",
+      "updatedDate": "Sun Jun 02 2024 22:36:21 GMT+0300 (Eastern European Summer Time)"
+    },
+    {
+      "id": -1,
+      "name": "Daily restart",
+      "bankName": "asd",
+      "description": "asdsadadsdsadadadsadasd",
+      "maxCredit": 5000,
+      "interestRate": 12,
+      "active": true,
+      "recommendedScore": "100-500",
+      "annualFee": 12,
+      "termsAndConditions": "Terms and conditions for the credit card",
+      "createdDate": "2024-05-07T21:00:00.000Z",
+      "updatedDate": "Sun Jun 02 2024 22:38:18 GMT+0300 (Eastern European Summer Time)"
+    },
+    {
+      "id": "6731",
+      "name": "asdasdasd",
+      "bankName": "asdadasdasd",
+      "description": "asdasdasdasdasdad",
+      "maxCredit": 5000,
+      "interestRate": 12,
+      "active": true,
+      "recommendedScore": "100-500",
+      "annualFee": 12,
+      "termsAndConditions": "Terms and conditions for the credit card",
+      "createdDate": "2024-06-03T21:00:00.000Z",
+      "updatedDate": "Sun Jun 02 2024 22:38:44 GMT+0300 (Eastern European Summer Time)"
     }
   ]
 }
