@@ -12,6 +12,7 @@ import { MatTableModule } from '@angular/material/table'
 import { MatPaginatorModule } from '@angular/material/paginator'
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClientModule, provideHttpClient } from '@angular/common/http';
     MatTableModule,
     MatPaginatorModule,
     MatCheckboxModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [
     provideHttpClient()
