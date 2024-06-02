@@ -9,6 +9,10 @@ import { EditComponent } from './edit/edit.component';
 import { DeleteComponent } from './delete/delete.component';
 import { SearchComponent } from './search/search.component';
 
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table'
+import { MatPaginatorModule } from '@angular/material/paginator'
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { SearchComponent } from './search/search.component';
   ],
   imports: [
     CommonModule,
-    CreditcardsRoutingModule
+    CreditcardsRoutingModule,
+    MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatCheckboxModule
   ]
 })
 export class CreditcardsModule { }
