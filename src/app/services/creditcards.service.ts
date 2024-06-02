@@ -3,13 +3,10 @@ import { Injectable } from '@angular/core';
 import { CreditCard } from '../models/credit-card';
 import { Observable } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({providedIn: 'root'})
 export class CreditcardsService {
 
   private apiUrl = "http://localhost:3000/creditcards";
-
 
   constructor(private httpClient: HttpClient) {
 
